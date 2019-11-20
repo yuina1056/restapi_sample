@@ -1,6 +1,12 @@
 package models
 
+import(
+	"github.com/jinzhu/gorm"
+)
+
+// Medicine struct
 type Medicine struct {
-	MedicineName string `json:name`
-	MedicineType string `json:type`
+	gorm.Model
+	Name string `json:"medicineName"`
+	Type string `json:"medicineType"`
 }

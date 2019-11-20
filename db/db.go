@@ -6,8 +6,8 @@ import (
 
 	"github.com/jinzhu/gorm"
 	"github.com/lib/pq"
+	"test_restapi/models"
 
-	//PostgreSQL driver
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
@@ -42,5 +42,7 @@ func AutoMigrate() {
 		log.Panic("DB未接続")
 		return
 	}
-	DB.AutoMigrate()
+	DB.AutoMigrate(
+		&models.Medicine{},
+	)
 }

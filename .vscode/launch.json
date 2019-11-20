@@ -5,12 +5,29 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch",
+      "name": "run",
       "type": "go",
       "request": "launch",
       "mode": "auto",
-      "program": "${fileDirname}",
-      "env": {},
+      "program": "/Users/wadanatsuki/repository/test_restapi/main.go",
+      "env": {
+        "PORT":"8080",
+        "DATABASE_URL":"postgres://ighwygdyfmolpa:634621e42d6b2fdec2fe5ee9c7696e3c45fbe62dd0a9dba7763a71835c9dcb34@ec2-174-129-29-101.compute-1.amazonaws.com:5432/dgmlnkc8jc4q0",
+        "POSTGRES_SSLMODE": "require",
+      },
+      "args": []
+    },
+    {
+      "name": "Migration",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "/Users/wadanatsuki/repository/test_restapi/task/migration.go",
+      "env": {
+        "PORT": "8080",
+        "DATABASE_URL": "postgres://ighwygdyfmolpa:634621e42d6b2fdec2fe5ee9c7696e3c45fbe62dd0a9dba7763a71835c9dcb34@ec2-174-129-29-101.compute-1.amazonaws.com:5432/dgmlnkc8jc4q0",
+        "POSTGRES_SSLMODE": "require",
+      },
       "args": []
     }
   ]
